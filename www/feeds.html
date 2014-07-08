@@ -1,0 +1,49 @@
+<ons-page ng-controller="FeedsController">
+
+    <ons-scroller>
+        <section style="padding: 10px;">
+            
+            <div class="topcoat-list status-bar feeds">
+            <ul class="topcoat-list__container">
+            <li class="topcoat-list__item topcoat-list__item__line-height">
+            <strong>Title:</strong> {{title}}<br/>
+            </li>
+            <li class="topcoat-list__item topcoat-list__item__line-height">
+            <strong>Description:</strong> {{description}}<br/>
+            </li>
+            <li class="topcoat-list__item topcoat-list__item__line-height">
+            <strong>Feed URL:</strong> {{link}}
+            </li>
+            </ul>
+            </div>
+            
+            <ons-row class="center status-message">
+                <ons-col>
+                <span ng-bind="msg"></span>
+                </ons-col>
+            </ons-row>
+            
+            <div ng-repeat="feed in feeds | limitTo: paginationLimit()">
+                
+                <img ng-repeat="thumbnail in mediaGroup(feed).contents" ng-src="{{thumbnail.url}}">
+                
+                <ons-row style="padding: 0 0 20px 0;">
+                    <ons-col>
+                        <h3 class="title" ng-click="showDetail($index)">{{feed.title}}</h3>
+
+                        <p class="post-excerpt" ng-bind-html="feed.contentSnippet"></p>
+                        <ons-button class="post-teaser" type="quiet" ng-click="showDetail($index)">Read more</ons-button>
+                    </ons-col>
+                </ons-row>
+            </div>
+            
+            <ons-row class="center">
+                <ons-col>
+                <ons-button ng-show="hasMoreItems()" ng-click="showMoreItems()" class="center post-show-more"><i class="fa fa-angle-double-down more-icon"></i>Show more</ons-button>
+                </ons-col>
+            </ons-row>
+            
+        </section>
+    </ons-scroller>
+    
+</ons-page>

@@ -1,0 +1,8 @@
+<ons-page class="map" ng-controller="MapController" sliding-menu-ignore="true">
+
+    <map zoom="{{items.zoom}}" center="{{items.center}}">
+        <marker ng-repeat="m in items.markers" position="{{m.position}}" title="{{m.name.toString()}}" on-click="showInfoWindow(event, 'marker-info', {title: m.name})"></marker>
+        <info-window id="marker-info">[[title]]</info-window>
+    </map>
+
+</ons-page>

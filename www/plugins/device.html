@@ -1,0 +1,48 @@
+<ons-page ng-controller="DeviceController">
+
+    <ons-scroller>
+        
+        <div class="topcoat-list topcoat-list--noborder">
+        <ul class="topcoat-list__container">
+            <li class="topcoat-list__item topcoat-list__item__line-height">
+            <ons-row>
+            <ons-col class="left">Name</ons-col>
+            <ons-col class="right right-col">{{device.name}}</ons-col>
+            </ons-row> 
+            </li>
+            <li class="topcoat-list__item topcoat-list__item__line-height">
+            <ons-row>
+            <ons-col class="left">Model</ons-col>
+            <ons-col class="right right-col">{{device.model}}</ons-col>
+            </ons-row> 
+            </li>
+            <li class="topcoat-list__item topcoat-list__item__line-height">
+            <ons-row>
+            <ons-col class="left">UUID</ons-col>
+            <ons-col size="90" class="right right-col">{{device.uuid}}</ons-col>
+            </ons-row> 
+            </li>
+            <li class="topcoat-list__item topcoat-list__item__line-height">
+            <ons-row>
+            <ons-col class="left">Cordova</ons-col>
+            <ons-col class="right right-col">{{device.cordova}}</ons-col>
+            </ons-row> 
+            </li>
+            <li class="topcoat-list__item topcoat-list__item__line-height">
+            <ons-row>
+            <ons-col class="left">Platform</ons-col>
+            <ons-col class="right right-col">{{device.platform}}</ons-col>
+            </ons-row> 
+            </li>
+            <li class="topcoat-list__item topcoat-list__item__line-height">
+            <ons-row>
+            <ons-col class="left">Version</ons-col>
+            <ons-col class="right right-col">{{device.version}}</ons-col>
+            </ons-row> 
+            </li>
+        </ul>
+        </div>
+        
+    </ons-scroller>
+    
+</ons-page>

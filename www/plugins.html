@@ -1,0 +1,21 @@
+<ons-page ng-controller="PluginsController">
+
+    <div class="topcoat-list topcoat-list--noborder">
+    <ul class="topcoat-list__container">
+        <li ng-repeat="item in items" ng-click="showDetail($index);" class="topcoat-list__item topcoat-list__item__line-height topcoat-list__item--tappable">
+            <ons-row>
+                <ons-col size="10"> 
+                <ons-icon icon="{{item.icon}}" fixed-width="true"></ons-icon>
+                </ons-col>
+                <ons-col class="left">
+                {{item.title}}
+                </ons-col>
+                <ons-col size="10" class="right" style="padding:0 10px 0 0;"> 
+                <ons-icon icon="angle-right" fixed-width="true"></ons-icon>
+                </ons-col>
+            </ons-row> 
+        </li>
+    </ul>
+    </div> 
+
+</ons-page>

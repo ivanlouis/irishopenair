@@ -1,0 +1,282 @@
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("../font/SourceSansPro-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("../font/SourceSansPro-Italic.ttf");
+  font-style:italic;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../font/SourceSansPro-Light.ttf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("../font/SourceSansPro-LightItalic.ttf");
+  font-weight: 300;
+  font-style:italic;
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("../font/SourceSansPro-Bold.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("../font/SourceSansPro-BoldItalic.ttf");
+  font-weight: 600;
+  font-style:italic;
+}
+
+* {
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-attachment:fixed;
+    font-family:'Source Sans Pro', 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:16px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    width:100%;
+}
+
+h1 {
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:16px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
+
+a { text-decoration:none; }
+
+.right-col { padding:0 10px 0 0; }
+
+.subtitle { margin:0 0 10px 0; font-size:14px }
+
+.social { font-size:12px; padding: 0 0 2px 0; }
+
+.social i { padding:0 5px 0 0; }
+
+.menu-page { background-color: white; }
+
+.menu-page .topcoat-navigation-bar i {font-size:16px; margin:0 10px 0 0; }
+
+.menu-page .topcoat-navigation-bar { border-bottom:none; }
+
+.rn-carousel-control {
+    font-size:50px !important;
+    color:white;
+    opacity: 1;
+}
+
+img { max-width: 100%; height:auto; }
+
+.map img { max-width: inherit!important; }
+
+h2.title, h3.title { margin:0; }
+
+.products h3.title { margin-top:10px; }
+
+.products .views-row { margin-bottom:10px; }
+
+.products .views-row:nth-child(odd) { padding-right:5px; }
+
+.products .views-row:nth-child(even) { padding-left:5px; }
+
+.tags, .categories { font-size:12px; margin:5px 0; }
+
+p.post-excerpt { margin-top:5px; }
+
+img.post-teaser-image { float:left; padding:20px 20px 10px 0; }
+
+button.post-teaser { padding:0; float:right; }
+
+button.post-show-more, button.load-show-more { margin:20px 0 0; }
+
+.status-bar-icon, .more-icon { padding:0 10px 0 0; }
+
+.post-submitted { font-size:12px; }
+
+.post-url { padding:20px 0 0 0; clear:both; display: inline-block; }
+
+.rn-carousel-indicator { margin-top:-4px; }
+
+li.rn-carousel-slide div.content {
+    box-sizing: border-box;
+    position:absolute;
+    bottom:4px;
+    background:rgba(0,0,0,0.7);
+    color:white;
+    font-size:16px;
+    width:100%;
+    padding:10px;
+}
+
+.rn-carousel-control.rn-carousel-control-next:before {
+content: "\f105"; font-family: 'FontAwesome';
+}
+
+.rn-carousel-control.rn-carousel-control-prev:before {
+content: "\f104 "; font-family: 'FontAwesome';
+}
+
+/* Grid Layout */
+.grid-menu {
+    width: 100%;
+    
+}
+
+.float-left {
+    float: left;
+}
+
+.centering-and-alignment {
+    display: box;
+    display: -ms-box;
+    display: -moz-box;
+    display: -o-box;
+    display: -webkit-box;
+    box-align: center;
+    -ms-box-align: center;
+    -moz-box-align: center;
+    -o-box-align: center;
+    -webkit-box-align: center;
+    box-pack: center;
+    -ms-box-pack: center;
+    -moz-box-pack: center;
+    -o-box-pack: center;
+    -webkit-box-pack: center;
+}
+
+.grid-menu-item {
+    width: 33.3333%;
+    height: 100%;
+    min-width: 100px;
+    min-height: 100px;
+    margin: 0;
+    padding: 0;
+    border-left: 1px solid #cecece!important;
+    border-bottom: 1px solid #cecece!important;
+    font-size: 48px;
+    text-align: center;
+  
+}
+
+.grid-menu-item:first-child {
+    border-left: none !important;
+}
+
+.grid-menu-item i {
+    margin-top: 20px;
+    font-size: 36px;
+}
+
+.grid-menu-item-label {
+    font-size: 16px; margin-bottom:20px;
+}
+
+.grid-menu-item.topcoat-list__item { border:none; }
+
+i { opacity:0.7; }
+
+.menu-page { font-size:16px; }
+
+.topcoat-list__container .topcoat-list__item { overflow: hidden; }
+
+.status-bar { margin: 10px -10px; } .status-message { padding:10px 0!important; }
+
+/* inAppBrowser plugin styles - https://github.com/apache/cordova-plugin-inappbrowser/blob/master/doc/index.md */
+.inAppBrowserWrap {
+  background-color: rgba(0,0,0,0.75);
+  color: rgba(235,235,235,1.0);
+}
+.inAppBrowserWrap menu {
+  overflow: auto;
+  list-style-type: none;
+  padding-left: 0;
+}
+.inAppBrowserWrap menu li {
+  font-size: 25px;
+  height: 25px;
+  float: left;
+  margin: 0 10px;
+  padding: 3px 10px;
+  text-decoration: none;
+  color: #ccc;
+  display: block;
+  background: rgba(30,30,30,0.50);
+}
+.inAppBrowserWrap menu li.disabled {
+    color: #777;
+}
+
+/* Comment the following style rules in case you are building this app for android devices */
+
+/*------------ Important style rules configuraiton  --------------*/
+
+/* Uncomment the following style rules in case you have enabled the onsen-android4_4 theme */
+/*.grid-menu-item {
+    border-left: 1px solid #3a3d40!important;
+    border-bottom: 1px solid #3a3d40!important; 
+}*/
+
+/* Comment the following style rules in case you are building this app for android devices */
+.menu-page .topcoat-navigation-bar {
+    padding-top: 20px;
+    height: 62px;
+}

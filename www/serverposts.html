@@ -1,0 +1,53 @@
+<ons-page ng-controller="ServerPostsController">
+
+    <ons-scroller>
+        <section style="padding: 10px;">
+            
+            <div class="topcoat-list status-bar">
+            <ul class="topcoat-list__container">
+            <li class="topcoat-list__item topcoat-list__item__line-height">
+            {{status_bar}}
+            </li>
+            </ul>
+            </div>
+
+            <div ng-repeat="post in posts">
+            <ons-row style="padding: 0 0 20px 0;">
+                <ons-col>
+                    <h3 class="title" ng-click="showDetail($index)">{{post.title}}</h3>
+
+                    <a ng-click="showDetail($index)">
+                    <img class="post-teaser-image" ng-src="{{post.attachments[0].images.thumbnail.url}}" ng-show="{{post.attachments.length}}"/>
+                    </a>
+
+                    <p class="post-excerpt" ng-bind-html="post.excerpt"></p>
+                    <ons-button class="post-teaser" type="quiet" ng-click="showDetail($index)">Read more</ons-button>
+
+                </ons-col>
+            </ons-row>
+            </div>
+
+            <div class="topcoat-list status-bar">
+            <ul class="topcoat-list__container">
+            <li class="topcoat-list__item topcoat-list__item__line-height">
+            {{status_bar}}
+            </li>
+            </ul>
+            </div>
+
+            <ons-row class="center">
+                <ons-col>
+                <ons-button ng-show="hasMoreItems()" ng-click="showMoreItems()" class="center load-show-more"><i class="fa fa-angle-double-down more-icon"></i>Load more</ons-button>
+                </ons-col>
+            </ons-row>
+
+            <ons-row class="center status-message">
+                <ons-col>
+                <span ng-bind="msg"></span>
+                </ons-col>
+            </ons-row>
+            
+        </section>
+    </ons-scroller>
+    
+</ons-page>

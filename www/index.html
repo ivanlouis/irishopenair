@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <!--
-    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
-
     Licensed to the Apache Software Foundation (ASF) under one
     or more contributor license agreements.  See the NOTICE file
     distributed with this work for additional information
@@ -23,24 +21,60 @@
     <head>
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
-        <meta name="msapplication-tap-highlight" content="no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Irish Openair Toggenburg</title>
+        
+        <title>Sensation</title>
+
+        <link rel="stylesheet" type="text/css" href="vendors/onsen/css/onsenui.css">
+    
+        <link rel="stylesheet" type="text/css" href="vendors/onsen/css/topcoat-mobile-onsen-ios7.css">
+        <!--<link rel="stylesheet" type="text/css" href="vendors/onsen/css/topcoat-mobile-onsen-android4_4.css">-->
+        <!--<link rel="stylesheet" type="text/css" href="vendors/onsen/css/topcoat-mobile-onsen-blue.css">-->
+        <!--<link rel="stylesheet" type="text/css" href="vendors/onsen/css/topcoat-mobile-onsen-orange.css">-->
+        <!--<link rel="stylesheet" type="text/css" href="vendors/onsen/css/topcoat-mobile-onsen-green.css">-->
+        <!--<link rel="stylesheet" type="text/css" href="vendors/onsen/css/topcoat-mobile-onsen-pink.css">-->
+        <!--<link rel="stylesheet" type="text/css" href="vendors/onsen/css/topcoat-mobile-onsen-purple.css">-->
+        <!--<link rel="stylesheet" type="text/css" href="vendors/onsen/css/topcoat-mobile-onsen-yellow.css">-->
+        
+        <link href='css/angular-carousel.css' rel='stylesheet' type='text/css'>
+        
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        
     </head>
     <body>
-        <div class="app">
-            <h1>PhoneGap</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div>
+
+        <ons-screen>
+            
+            <ons-sliding-menu swipe-target-width="100" max-slide-distance="85%"
+            behind-page="menu.html" 
+            above-page="home.html">
+            </ons-sliding-menu>
+
+        </ons-screen>
+        
+        <!-- Javascripts -->
+        <script type="text/javascript" src="vendors/onsen/js/angular/angular.js"></script>    
+        <script type="text/javascript" src="vendors/onsen/js/angular/angular-touch.js"></script>
+
+        <script type="text/javascript" src="vendors/onsen/js/onsenui.js"></script>
+        
+        <script type="text/javascript" src="js/app.js"></script>
+        <script type="text/javascript" src="js/data.js"></script>
+        
+        <script type="text/javascript" src="js/angular-carousel.js"></script>
+        <script type="text/javascript" src="js/ng-map.js"></script>
+        <script type="text/javascript" src="js/event.js"></script>
+        <script type="text/javascript" src="js/ui-map.js"></script>
+        <script type="text/javascript" src="js/spinner.js"></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+        <script type="text/javascript" src="js/angular-local-storage.js"></script>
+        <script type="text/javascript" src="js/angular-sanitize.js"></script>
+        
         <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
         </script>
+        
     </body>
 </html>

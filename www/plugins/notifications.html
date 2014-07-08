@@ -1,0 +1,21 @@
+<ons-page ng-controller="NotificationsController">
+
+    <ons-scroller>
+        
+    <section style="margin: 5px">
+        
+        <ons-row style="margin: 10px 0;">
+        <ons-col><section style="margin: 0 5px"><ons-button type="large" ng-click="alertNotify()">Alert</ons-button></section></ons-col>
+        <ons-col><section style="margin: 0 5px"><ons-button type="large" ng-click="beepNotify()">Beep</ons-button></section></ons-col>
+        </ons-row>
+
+        <ons-row style="margin: 10px 0;">
+        <ons-col><section style="margin: 0 5px"><ons-button type="large" ng-click="confirmNotify()">Confirm</ons-button></section></ons-col>
+        <ons-col><section style="margin: 0 5px"><ons-button type="large" ng-click="vibrateNotify()">Vibrate</ons-button></section></ons-col>
+        </ons-row>
+
+    </section>
+        
+    </ons-scroller>
+    
+</ons-page>

@@ -1,0 +1,24 @@
+<ons-page class="center" ng-controller="ContactController">
+
+    <ons-scroller>
+        <section style="padding: 10px">
+
+            <ons-text-input
+                placeholder="Subject" ng-model="subject"
+                style="width: 100%; display: block">
+            </ons-text-input>
+
+            <ons-text-area 
+                placeholder="Message" ng-model="message" 
+                style="width: 100%; margin-top: 10px; height: 200px;">
+            </ons-text-area>
+
+            <ons-button 
+              type="large" ng-click="submitForm()"
+              style="margin-top: 10px;">
+              Send Message
+            </ons-button>
+        </section>  
+    </ons-scroller>
+
+</ons-page>

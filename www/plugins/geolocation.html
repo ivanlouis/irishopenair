@@ -1,0 +1,73 @@
+<ons-page class="map" ng-controller="GeolocationController">
+    
+ <ons-scroller>
+     
+        <div class="row">
+            <div id="map-canvas" ui-map="model.map" ui-options="mapOptions" style="height:200px; width:100%;" ui-event="{'map-idle' : 'onMapIdle()'}">
+            </div>
+            <div ng-repeat="marker in markers" ui-map-marker="markers[$index]" ui-event="{'map-click': 'markerClicked(marker)'}">
+            </div>
+        </div>
+        
+        <div class="topcoat-list topcoat-list--noborder" ng-show="showResult()">
+            <ul class="topcoat-list__container">
+                <li class="topcoat-list__item topcoat-list__item__line-height">
+                <ons-row>
+                <ons-col class="left">Latitude</ons-col>
+                <ons-col class="right right-col">{{latitude}}</ons-col>
+                </ons-row> 
+                </li>
+                <li class="topcoat-list__item topcoat-list__item__line-height">
+                <ons-row>
+                <ons-col class="left">Longitude</ons-col>
+                <ons-col class="right right-col">{{longitude}}</ons-col>
+                </ons-row> 
+                </li>
+                <li class="topcoat-list__item topcoat-list__item__line-height">
+                <ons-row>
+                <ons-col class="left">Altitude</ons-col>
+                <ons-col class="right right-col">{{altitude}}</ons-col>
+                </ons-row> 
+                </li>
+                <li class="topcoat-list__item topcoat-list__item__line-height">
+                <ons-row>
+                <ons-col class="left">Accuracy</ons-col>
+                <ons-col class="right right-col">{{accuracy}}</ons-col>
+                </ons-row> 
+                </li>
+                <li class="topcoat-list__item topcoat-list__item__line-height">
+                <ons-row>
+                <ons-col class="left">Altitude Accuracy</ons-col>
+                <ons-col class="right right-col">{{altitudeAccuracy}}</ons-col>
+                </ons-row> 
+                </li>
+                <li class="topcoat-list__item topcoat-list__item__line-height">
+                <ons-row>
+                <ons-col class="left">Heading</ons-col>
+                <ons-col class="right right-col">{{heading}}</ons-col>
+                </ons-row> 
+                </li>
+                <li class="topcoat-list__item topcoat-list__item__line-height">
+                <ons-row>
+                <ons-col class="left">Speed</ons-col>
+                <ons-col class="right right-col">{{speed}}</ons-col>
+                </ons-row> 
+                </li>
+                <li class="topcoat-list__item topcoat-list__item__line-height">
+                <ons-row>
+                <ons-col class="left">Timestamp</ons-col>
+                <ons-col size="90" class="right right-col">{{timestamp}}</ons-col>
+                </ons-row> 
+                </li>
+            </ul>
+        </div>
+     
+        <div class="row" ng-show="!showResult()">
+        Error : {{error}}
+        Error Code: {{error.code}}
+        </div> 
+        
+    </ons-scroller>
+    
+
+</ons-page>

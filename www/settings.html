@@ -1,0 +1,33 @@
+<ons-page ng-controller="SettingsController" sliding-menu-ignore="true">
+    
+    <div class="topcoat-list topcoat-list--noborder">
+    <ul class="topcoat-list__container">
+        <li ng-repeat="setting in settings.options" class="topcoat-list__item topcoat-list__item__line-height">
+        <label class="topcoat-switch" style="float:right; margin:6px 10px 0 0">
+        <input type="checkbox" class="topcoat-switch__input" name="setting.name" ng-model="setting.value" ng-change="saveSettings()"><div class="topcoat-switch__toggle"></div>
+        </label> 
+        <span class="topcoat-list__item__line-height">{{setting.name}}</span>
+        </li>
+    </ul>
+        
+    <div class="topcoat-list topcoat-list--noborder">
+    <h3 class="topcoat-list__header">Range Input</h3>
+    <ul class="topcoat-list__container">
+        <li class="topcoat-list__item topcoat-list__item__line-height">
+            <ons-row>
+                <ons-col size="10"> 
+                <ons-icon icon="minus" fixed-width="true"></ons-icon>
+                </ons-col>
+                <ons-col class="left">
+                <input type="range" class="topcoat-range" value="{{settings.range}}" ng-model="settings.range" ng-change="saveSettings()" style="width:100%; margin:6px 0 0 0;">
+                </ons-col>
+                <ons-col size="10" class="right" style="padding:0 10px 0 0;"> 
+                <ons-icon icon="plus" fixed-width="true"></ons-icon>
+                </ons-col>
+            </ons-row> 
+        </li>
+    </ul>
+        
+    </div>
+
+</ons-page>

@@ -1,0 +1,21 @@
+<ons-page ng-controller="FeedController">
+
+    <ons-scroller>
+        <section style="padding: 10px;">
+            
+            <h2 class="title">{{item.title}}</h2>
+            
+            <div class="post-submitted">
+            Posted {{item.publishedDate }}
+            </div>
+            <p ng-bind-html="item.content"></p>
+            
+            <!-- Open the post using the InAppBrowser plugin (org.apache.cordova.inappbrowser) -->
+            <ons-button type="large" ng-click="loadURL('{{item.link}}')">
+            View post
+            </ons-button>
+
+        </section>
+    </ons-scroller>
+    
+</ons-page>

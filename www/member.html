@@ -1,0 +1,15 @@
+<ons-page ng-controller="MemberController">
+
+    <ons-scroller>
+        <section style="padding: 10px;">
+        <h2 class="title">{{item.title}}</h2>
+        <div class="subtitle">{{item.subtitle}}</div>
+        <p>{{item.body}}</p>
+            
+        <div class="social"><ons-icon icon="envelope" fixed-width="true"></ons-icon>{{item.email}}</div>
+        <div class="social"><ons-icon icon="linkedin" fixed-width="true"></ons-icon>{{item.linkedin}}</div>
+        <div class="social"><ons-icon icon="twitter" fixed-width="true"></ons-icon>{{item.twitter}}</div>
+        </section>
+    </ons-scroller>
+    
+</ons-page>

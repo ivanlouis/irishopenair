@@ -76,74 +76,49 @@ sensationApp.factory('MenuData', function(){
     
     data.items = [
         { 
-            title: 'Home',
+            title: 'Start',
             icon: 'home',
             navigator: 'home'
         },
         { 
-            title: 'News',
+            title: 'Programm',
             icon: 'calendar',
-            navigator: 'news'
+            navigator: 'programm'
         },
         { 
-            title: 'Products',
-            icon: 'shopping-cart',
-            navigator: 'products'
-        },
-        {
-            title: 'Gallery',
-            icon: 'camera',
-            navigator: 'gallery'
-        },
-        { 
-            title: 'About Us',
-            icon: 'users',
-            navigator: 'about'
-        },
-        { 
-            title: 'Elements',
-            icon: 'code',
-            navigator: 'elements'
-        },
-        { 
-            title: 'Map',
+            title: 'Festivalkarte',
             icon: 'map-marker',
+            navigator: 'festivalkarte'
+        },
+		{ 
+            title: 'Anreise',
+            icon: 'location-arrow',
             navigator: 'map'
         },
         { 
-            title: 'Contact',
+            title: 'Shuttlebus',
+            icon: 'road',
+            navigator: 'shuttlebus'
+        },
+        { 
+            title: 'A bis Z',
+            icon: 'sort-alpha-asc',
+            navigator: 'az'
+        },
+        { 
+            title: 'Platzordnung',
+            icon: 'shield',
+            navigator: 'platzordnung'
+        },
+		{ 
+            title: 'Über uns',
+            icon: 'users',
+            navigator: 'ueberuns'
+        },
+        { 
+            title: 'Kontakt',
             icon: 'envelope-o',
-            navigator: 'contact'
-        },
-        { 
-            title: 'Wordpress JSON API',
-            icon: 'code-fork',
-            navigator: 'posts'
-        },
-        { 
-            title: 'Elements',
-            icon: 'code',
-            navigator: 'elements'
-        },
-        { 
-            title: 'Grid',
-            icon: 'th',
-            navigator: 'grid'
-        },
-        { 
-            title: 'RSS',
-            icon: 'rss',
-            navigator: 'feeds'
-        },
-        { 
-            title: 'Pagination',
-            icon: 'sort-numeric-asc',
-            navigator: 'pagination'
-        },
-        { 
-            title: 'Tab-Bar',
-            icon: 'columns',
-            navigator: 'tab-bar'
+            navigator: 'kontakt'
         }
     ]; 
     
@@ -157,15 +132,11 @@ sensationApp.factory('MapData', function(){
     data.items = {
         markers: [
         {
-           position: [40.71, -74.21],
-           name: 'First Store'
-        }, 
-        {
-           position: [40.73, -74.28],
-           name: 'Second Store'
+           position: [47.244403, 9.234661],
+           name: 'Irish Openair Toggenburg'
         }],
         zoom: 11,
-        center: [40.72, -74.24]
+        center: [47.244403, 9.234661]
     };
 
     return data;

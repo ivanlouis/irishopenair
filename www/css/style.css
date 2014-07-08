@@ -57,6 +57,12 @@ body {
     width:100%;
 }
 
+.hr{
+	border-top: 1px solid #ccc;
+	margin: 15px 0px 25px 0px;
+	width: 100%;
+}
+
 h1 {
     font-size:24px;
     font-weight:normal;
@@ -64,6 +70,18 @@ h1 {
     overflow:visible;
     padding:0px;
     text-align:center;
+}
+
+h1, h2, h3{
+		color: #B6CB35;
+}
+
+.fett, strong{
+	font-weight:bold;	
+}
+
+a{
+	color: #FFF;	
 }
 
 .event {

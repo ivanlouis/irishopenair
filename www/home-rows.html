@@ -1,27 +1,15 @@
-<ons-navigator title="Sensation"
+<ons-navigator title="Irish Openair Toggenburg"
     left-button-icon="fa fa-lg fa-bars"
     on-left-button-click="ons.slidingMenu.toggleMenu()"
     right-button-icon="fa fa-lg fa-gears"
     on-right-button-click="ons.navigator.pushPage('settings.html',{title: 'Settings'})">
     
     <ons-page ng-controller="HomeController">
-        
-        <h3 class="topcoat-list__header">Native</h3>
-        <div class="topcoat-list">
-            <ul class="topcoat-list__container">
-                <li ng-repeat="item in items" ng-click="showDetail($index);" class="topcoat-list__item topcoat-list__item__line-height topcoat-list__item--tappable">
-                    <ons-row>
-                        <ons-col size="10"> 
-                        <ons-icon icon="{{item.icon}}" fixed-width="true"></ons-icon>
-                        </ons-col>
-                        <ons-col class="left">{{item.title}}</ons-col>
-                        <ons-col size="10" class="right right-col"> 
-                        <ons-icon icon="angle-right" fixed-width="true"></ons-icon>
-                        </ons-col>
-                    </ons-row> 
-                </li>
-            </ul>
-        </div>
+          <ons-scroller>
+          <div style="padding: 0px">
+          <img src="img/seiten/start.jpg" alt=""/>
+          </div></ons-scroller>
+          
             
         <h3 class="topcoat-list__header">Mobile</h3>
         <div class="topcoat-list">
@@ -31,7 +19,7 @@
                         <ons-col size="10"> 
                         <ons-icon icon="mobile" fixed-width="true"></ons-icon>
                         </ons-col>
-                        <ons-col class="left">Mobile Plugins</ons-col>
+                        <ons-col class="left">Mobile Pluginss</ons-col>
                         <ons-col size="10" class="right right-col"> 
                         <ons-icon icon="angle-right" fixed-width="true"></ons-icon>
                         </ons-col>
